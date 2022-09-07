@@ -24,7 +24,7 @@ h3 {
 }
 
 nav {
-    width: 72%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 50px;
@@ -39,6 +39,13 @@ nav {
     margin: 0px;
     padding: 0px 0px 100px 0px;
     background: url(./images/background.png), linear-gradient(172deg, #3a7bd5 0%, #00417a 100%);
+}
+
+#email {
+    padding-top: 40px;
+    font-size: 4rem;
+    margin: 0px;
+    font-weight: 700;
 }
 
 .grid {
@@ -73,7 +80,7 @@ body {
 .welcome {
     margin-top: 50px;
     padding-bottom: 50px;
-    width: 72%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -116,7 +123,8 @@ body {
 
 #btn,
 #btn-quote,
-#btn-skill {
+#btn-skill,
+#btn-email {
     font-size: medium;
     border-radius: 10px;
     border: none;
@@ -131,9 +139,17 @@ body {
     background-color: var(--primary);
 }
 
+#btn-email {
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 1/6;
+    margin-top: 27px;
+}
+
 
 #btn-quote,
-#btn-skill {
+#btn-skill,
+#btn-email {
     padding: 13px;
     outline: 1px solid white;
     background-color: transparent;
@@ -155,7 +171,8 @@ body {
 }
 
 #btn-quote:hover,
-#btn-skill:hover {
+#btn-skill:hover,
+#btn-email:hover {
     background-color: white;
     color: #202020;
 }
@@ -165,33 +182,45 @@ li {
     padding: 0px 10px;
 }
 
-.skills,
-.about,
-.contact {
+.skills {
     padding-top: 50px;
     padding-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
-    width: 72%;
+    width: 70%;
+    text-align: center;
+}
+
+.contact {
+    margin-top: 50px;
+    background: url(./images/background.png), url(./images/bg.png);
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .skills-heading,
-.about-heading,
 .contact-heading {
     justify-content: center;
     grid-column: 1/6;
     color: white;
+    text-align: center;
 }
 
 .skills-heading h2,
-.about-heading h2,
 .contact-heading h2 {
     text-align: center;
     color: orange;
 }
 
+.contact-heading h2 {
+    font-size: 55px;
+    grid-column: 1/6;
+    margin-top: 23px;
+    margin-bottom: 10px;
+    padding: 0px 20px;
+}
+
 .skills-heading p,
-.about-heading p,
 .contact-heading p {
     grid-column: 1/6;
     text-align: center;
@@ -199,10 +228,18 @@ li {
     margin-top: 0px;
 }
 
-.skills h2,
-.about h2,
-.contact h2 {
-    font-size: 35px;
+.contact-heading p {
+    font-size: 15px;
+    color: lightgray;
+}
+
+#talk {
+    letter-spacing: 6px;
+}
+
+
+.skills h2 {
+    font-size: 45px;
     grid-column: 1/6;
 }
 
@@ -212,6 +249,8 @@ li {
     margin-top: 40px;
     grid-column: 1/6;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cards img {
@@ -263,12 +302,12 @@ footer {
     font-size: 15px;
     margin-top: 50px;
     margin-bottom: 30px;
-
     grid-column: 1/6;
 }
 
 footer p {
-    padding-top: 20px;
+    padding: 20px 30px;
+    margin: 0px;
 }
 
 footer .so-icon {
@@ -291,14 +330,14 @@ footer .so-icon {
 
     transform: scale(1.05);
     background-color: #303030;
-
+    box-shadow: 10px 7px 400px 1px rgba(255, 255, 255, 0.75);
 }
 
 #attribution {
     padding: 0px;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1176px) {
 
     #hamburger {
         position: absolute;
@@ -310,7 +349,15 @@ footer .so-icon {
         padding-top: 30px;
     }
 
-    #btn-quote {
+    .contact-heading h2 {
+        font-size: 30px;
+    }
+
+    .contact-heading p {
+        padding: 0px 40px;
+    }
+
+    #btn-skill {
         margin-left: 0px;
     }
 
@@ -340,6 +387,7 @@ footer .so-icon {
         display: flex;
         padding-left: 0px;
         width: 100%;
+        text-align: center;
     }
 
     .cards {
@@ -394,6 +442,8 @@ footer .so-icon {
         padding-right: 0px;
         font-size: 15px;
         line-height: 22px;
+        text-justify: inter-character;
+        text-align: justify;
     }
 
     .welcome-img {
@@ -414,6 +464,10 @@ footer .so-icon {
     .skills {
         margin-left: auto;
         margin-left: auto;
+    }
+
+    footer p {
+        font-size: 13px;
     }
 
     footer img {
