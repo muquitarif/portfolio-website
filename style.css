@@ -6,7 +6,6 @@
     --paragraph: rgba(255, 255, 255, 0.767);
     --card: rgb(68, 68, 68);
     --icons-bacground: #ffffff;
-    --hero: rgb(23, 175, 18);
 }
 
 * {
@@ -39,8 +38,7 @@ nav {
 #hero {
     margin: 0px;
     padding: 0px 0px 100px 0px;
-    background-position: center;
-    background: url(./images/back.png), linear-gradient(172deg, #3a7bd5 0%, #004e91 100%);
+    background: url(./images/background.png), linear-gradient(172deg, #3a7bd5 0%, #00417a 100%);
 }
 
 .grid {
@@ -116,31 +114,30 @@ body {
     font-weight: 400;
 }
 
-#btn {
-    font-size: medium;
-    border-radius: 10px;
-    background-color: var(--primary);
-    border: none;
-    color: #303030;
-    font-weight: 500;
-    min-width: 150px;
-    padding: 14px;
-    grid-column: 1/1;
-    grid-row: 3;
-}
-
+#btn,
 #btn-quote,
 #btn-skill {
     font-size: medium;
     border-radius: 10px;
-    background-color: transparent;
     border: none;
-    color: #ffffff;
+    color: #303030;
     font-weight: 500;
     min-width: 150px;
-    padding: 13px;
     grid-column: 1/1;
+}
+
+#btn {
+    padding: 13px;
+    background-color: var(--primary);
+}
+
+
+#btn-quote,
+#btn-skill {
+    padding: 13px;
     outline: 1px solid white;
+    background-color: transparent;
+    color: white;
 }
 
 #btn-quote {
@@ -275,7 +272,8 @@ footer p {
 }
 
 footer .so-icon {
-    font-size: 25px
+    font-size: 25px;
+    display: inline-block;
 }
 
 .so-icon {
@@ -304,12 +302,16 @@ footer .so-icon {
 
     #hamburger {
         position: absolute;
-        padding-top: 30px;
         top: 25px;
-        right: 45px;
+        right: 130px;
         display: block;
         filter: invert();
         width: 35px;
+        padding-top: 30px;
+    }
+
+    #btn-quote {
+        margin-left: 0px;
     }
 
     #nav-links {
@@ -457,6 +459,14 @@ footer .so-icon {
     }
 }
 
+@media screen and (max-width: 480px) {
+    #hamburger {
+        position: absolute;
+        top: 25px;
+        right: 65px;
+    }
+}
+
 @media screen and (min-width: 1300px) {
     .welcome p {
         width: 70%;
@@ -469,19 +479,4 @@ footer .so-icon {
     .so-icon {
         display: none;
     }
-}
-
-/*Book Page*/
-
-input {
-    padding: 15px 80px 15px 30px;
-    border-radius: 50px;
-    background-color: var(--background);
-    border: 0px;
-    outline: 0.5px solid var(--paragraph);
-}
-
-input {
-    color: white;
-    font-size: 16px;
 }
