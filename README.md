@@ -2,7 +2,7 @@
 
 Portfolio Website for Webn'Tec - The Portfolio BootCamp
 
-## Live Site Url
+## Live Site URL
 https://portfolio-website-muquitarif.vercel.app/
 
 ## Email
